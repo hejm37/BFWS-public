@@ -1,3 +1,10 @@
+# Build files
+.sconsign.dblite
+
+# Output files
+plan.ipc
+execution.details
+
 # Compiled Object files
 *.slo
 *.lo

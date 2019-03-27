@@ -5,12 +5,7 @@ common_env = Environment(ENV = os.environ)
 
 platform = ARGUMENTS.get('OS', Platform())
 
-if platform.name == 'darwin':
-        lwaptk_base_dir = '/Users/nirlipo/Sandboxes/LAPKT-public'
-else:
-	lwaptk_base_dir = '/home/nirlipo/Sandboxes/LAPKT-public'
-	#lwaptk_base_dir = '/media/sf_Sandboxes/LAPKT-public'
-
+lwaptk_base_dir = os.environ.get("LAPKT_PATH")
 
 common_env.Append( CCFLAGS = [ '-Wall', '-std=c++11' ] )
 
