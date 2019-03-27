@@ -1,7 +1,8 @@
 # Build files
 .sconsign.dblite
 
-# Output files
+# Local testing and output files
+fd-version/testing
 plan.ipc
 execution.details
 
