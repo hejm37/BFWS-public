@@ -12,7 +12,11 @@ def main(domain_file, problem_file, search_alg):
 
     task.ignore_action_costs = True
 
-    fd.grounding.default(domain_file, problem_file, task)
+    if search_alg == 'dual-1-BFWS':
+        search_alg = '1-BFWS'
+        fd.grounding.dual_translate(domain_file, problem_file, task)
+    else:
+        fd.grounding.default(domain_file, problem_file, task)
 
     # NIR: Uncomment to check what actions are being loaded
     # for i in range( 0, task.num_actions() ) :
